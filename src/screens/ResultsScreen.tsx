@@ -48,7 +48,7 @@ export default function ResultsScreen() {
         className="max-w-6xl mx-auto"
       >
         {/* Header & State Toggle */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        {/* <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <span className="text-secondary font-bold tracking-widest text-[11px] uppercase mb-2 block">Curated Just For You</span>
             <h1 className="text-4xl font-bold text-on-surface tracking-tight max-w-2xl font-headline">Recommended Options Based on Your Profile</h1>
@@ -61,7 +61,7 @@ export default function ResultsScreen() {
               Restaurant List
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Bento Grid Results */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
