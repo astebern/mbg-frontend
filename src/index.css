@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #1B4D3E;
+  --color-primary-container: #E8F5E9;
+  --color-secondary: #059669;
+  --color-surface: #F4F7F5;
+  --color-surface-bright: #FFFFFF;
+  --color-surface-dim: #D1D9D6;
+  --color-surface-container-low: #F7FAF9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container: #EEF3F0;
+  --color-surface-container-high: #D1D9D6;
+  --color-surface-container-highest: #C4CEC9;
+  --color-on-surface: #1B1E1D;
+  --color-on-surface-variant: #5A6460;
+  --color-outline: #C4CEC9;
+  --color-outline-variant: #D1D9D6;
+  
+  --radius-xl: 24px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface-bright/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white/20;
+}
+
+.signature-gradient {
+  background: linear-gradient(135deg, #1B4D3E, #10B981);
+}
+
