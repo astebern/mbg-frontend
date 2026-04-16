@@ -24,8 +24,8 @@ export default function Sidebar() {
   return (
     <aside className="h-screen w-[280px] fixed left-0 top-0 bg-[#E8F5E9]/40 backdrop-blur-md border-r border-[#C4CEC9]/30 flex flex-col py-10 px-[30px] z-50">
       <div className="mb-10">
-        <h3 className="text-[14px] uppercase tracking-[3px] text-primary font-black mb-6 font-headline">The Curated Kitchen</h3>
-        <p className="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Culinary Assistant</p>
+        <h3 className="text-[14px] uppercase tracking-[4px] text-primary font-black mb-6 font-headline">Meal Budget Guide</h3>
+        <p className="text-[10px] text-on-surface-variant tracking-widest font-bold opacity-60">K01 | Kata Evan Fengshui 04 Jelek</p>
       </div>
       
       <nav className="flex-1 space-y-2">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Bell, Settings } from 'lucide-react';
+import ppImage from '../resources/pp.png';
 
 interface TopBarProps {
   title: string;
@@ -32,7 +33,7 @@ export default function TopBar({ title }: TopBarProps) {
           <div className="w-10 h-10 rounded-xl overflow-hidden border border-outline shadow-sm">
             <img 
               alt="User avatar" 
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+              src={ppImage}
               referrerPolicy="no-referrer"
             />
           </div>
