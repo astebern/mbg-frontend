@@ -9,6 +9,5 @@
 3. Run the app:
    `npm run dev`
 
-## Needs Update
-- On Criteria -> Your Neighboorhood; show only Bandung & Jakarta (For Convinience)
--
+## Future Update
+- Responsive Dimensions
