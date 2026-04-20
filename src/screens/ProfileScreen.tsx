@@ -200,7 +200,7 @@ export default function ProfileScreen() {
                   <input
                     type="number"
                     value={age}
-                    onChange={e => setAge(Math.max(1, Math.min(120, parseInt(e.target.value) || 0)))}
+                    onChange={e => setAge(Math.max(0, Math.min(999, parseInt(e.target.value) || 0)))}
                     className="w-full bg-surface py-4 px-5 rounded-xl font-bold text-lg border border-outline/50 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                   />
                 </div>
@@ -209,7 +209,7 @@ export default function ProfileScreen() {
                   <input
                     type="number"
                     value={height}
-                    onChange={e => setHeight(Math.max(50, Math.min(300, parseInt(e.target.value) || 0)))}
+                    onChange={e => setHeight(Math.max(0, Math.min(999, parseInt(e.target.value) || 0)))}
                     className="w-full bg-surface py-4 px-5 rounded-xl font-bold text-lg border border-outline/50 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                   />
                 </div>
@@ -218,7 +218,7 @@ export default function ProfileScreen() {
                   <input
                     type="number"
                     value={weight}
-                    onChange={e => setWeight(Math.max(10, Math.min(500, parseInt(e.target.value) || 0)))}
+                    onChange={e => setWeight(Math.max(0, Math.min(999, parseInt(e.target.value) || 0)))}
                     className="w-full bg-surface py-4 px-5 rounded-xl font-bold text-lg border border-outline/50 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                   />
                 </div>
@@ -405,7 +405,7 @@ export default function ProfileScreen() {
                 <label className="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest block">Macro Breakdown</label>
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { label: 'PROTEIN', value: `${nutrition.protein}g`, tag: nutrition.protein > 120 ? 'High' : undefined, bg: 'border-primary' },
+                    { label: 'PROTEIN', value: `${nutrition.protein}g`,  bg: 'border-secondary' },
                     { label: 'CARBS', value: `${nutrition.carbs}g`, bg: 'border-secondary' },
                     { label: 'FATS', value: `${nutrition.fats}g`, bg: 'border-outline' },
                   ].map((macro) => (
@@ -413,14 +413,7 @@ export default function ProfileScreen() {
                       <div className={cn("w-16 h-16 rounded-full border-[3px] flex items-center justify-center bg-surface-container/30", macro.bg)}>
                         <span className="text-lg font-black">{macro.value}</span>
                       </div>
-                      <div>
-                        <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest block mb-1">{macro.label}</span>
-                        {macro.tag && (
-                          <span className="px-2 py-0.5 rounded-full text-[9px] font-black uppercase text-white bg-primary">
-                            {macro.tag}
-                          </span>
-                        )}
-                      </div>
+                      <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest block mb-1">{macro.label}</span>
                     </div>
                   ))}
                 </div>
