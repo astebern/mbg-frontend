@@ -276,14 +276,14 @@ export default function ProfileScreen() {
                   key={diet.label}
                   onClick={() => toggleDietaryPreference(index)}
                   className={cn(
-                    "flex items-center gap-3 py-4 px-5 rounded-xl border font-bold transition-all text-left",
+                    "flex items-center gap-1 py-4 px-5 rounded-xl border font-bold transition-all text-left",
                     diet.checked 
                       ? "bg-primary-container/20 border-primary/30 text-on-surface" 
                       : "bg-surface/50 border-outline/50 text-on-surface-variant opacity-60 hover:opacity-80"
                   )}
                 >
                   <div className={cn(
-                    "w-5 h-5 rounded-md flex items-center justify-center border-2 transition-all",
+                    "w-5 h-5 min-w-5 min-h-5 shrink-0 rounded-md flex items-center justify-center border-2 transition-all",
                     diet.checked ? "bg-primary border-primary text-white" : "border-outline text-transparent"
                   )}>
                     <Check className={cn("w-3 h-3", diet.checked ? "block" : "hidden")} />
@@ -425,7 +425,7 @@ export default function ProfileScreen() {
                   <Lightbulb className="w-5 h-5 text-amber-600" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-amber-900 mb-1">Rekomendasi Berbasis Penelitian</p>
+                  <p className="text-sm font-semibold text-amber-900 mb-1">Rekomendasi</p>
                   <p className="text-xs text-amber-700 leading-relaxed">
                     Target kalori dan makronutrien dihitung menggunakan persamaan <strong>Mifflin-St Jeor</strong> yang disesuaikan dengan tingkat aktivitas dan tujuan Anda. Rumus ini direkomendasikan oleh <strong>Academy of Nutrition and Dietetics</strong> sebagai metode paling akurat untuk estimasi kebutuhan energi harian.
                   </p>

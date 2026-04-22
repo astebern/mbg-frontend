@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Bell, Settings, LogOut, Menu } from 'lucide-react';
 import ppImage from '../resources/pp.png';
+import LoginScreen from '../screens/LoginScreen';
 
 interface TopBarProps {
   title: string;
@@ -51,7 +52,7 @@ export default function TopBar({ title, onMenuToggle }: TopBarProps) {
             </button>
 
             {showLogout && (
-              <div className="absolute right-0 top-full mt-2 bg-surface-bright border border-outline rounded-xl shadow-xl py-1 min-w-[160px] animate-in fade-in slide-in-from-top-2 z-50">
+              <div className="absolute right-0 top-full mt-2 bg-surface-bright border border-outline rounded-xl shadow-xl py-1 min-w-[160px] animate-in fade-in slide-in-from-top-2 z-50" ref={LoginScreen}>
                 <button
                   onClick={() => { /* handle logout */ }}
                   className="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium text-red-600 hover:bg-red-50 transition-colors rounded-xl"
